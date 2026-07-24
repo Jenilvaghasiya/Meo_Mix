@@ -145,7 +145,7 @@ export const FLAVORS = [
 ];
 
 export const BRAND_INFO = {
-  name: 'MEO MIX®',
+  name: 'MEO MIX',
   company: 'Empire Foods & Beverages',
   tagline: 'Refresh Every Sip',
   description: 'Crafting world-class fruit beverages with premium fruit pulp and ultra-hygienic aseptic bottling technology.',

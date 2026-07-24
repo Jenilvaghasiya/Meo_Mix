@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <defs>
+      <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#6CCB5F" />
+        <stop offset="100%" stop-color="#49B649" />
+      </linearGradient>
+    </defs>
+    <path d="M50 10 C80 30, 85 70, 50 90 C15 70, 20 30, 50 10 Z" fill="url(#mintGrad)"/>
+    <path d="M50 10 L50 90" stroke="#DDF8D2" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 30 L70 42 M50 50 L72 62 M50 30 L30 42 M50 50 L28 62" stroke="#DDF8D2" stroke-width="2" stroke-linecap="round"/>
+  </svg>

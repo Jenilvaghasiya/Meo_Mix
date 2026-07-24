@@ -11,7 +11,7 @@ export const VideoSection = () => {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
       >
         <source src="/Video/Meo_MIx_Video.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.

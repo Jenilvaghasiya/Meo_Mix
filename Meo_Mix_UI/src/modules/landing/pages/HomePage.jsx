@@ -19,8 +19,8 @@ export const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>MEO MIX® | Refresh Every Sip - World-Class Premium Fruit Juices</title>
-        <meta name="description" content="Experience MEO MIX® premium fruit beverages. Explore 8 vibrant flavors including Royal Mango, Lush Lychee, Zesty Orange, and Pink Guava." />
+        <title>MEO MIX | Empire Foods & Beverages</title>
+        <meta name="description" content="Experience MEO MIX premium fruit beverages. Explore 8 vibrant flavors including Royal Mango, Lush Lychee, Zesty Orange, and Pink Guava." />
       </Helmet>
 
       <div className="home-page-container">

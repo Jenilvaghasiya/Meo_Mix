@@ -1,8 +1,8 @@
-# 🍹 Meo Mix® Official Website — Premium Beverage Web Experience
+# 🍹 Meo Mix Official Website — Premium Beverage Web Experience
 
-![Meo Mix® Banner](public/assets/logo/meo_mix_logo.png)
+![Meo Mix Banner](public/assets/logo/meo_mix_logo.png)
 
-A world-class, immersive, 3D interactive web application for **Meo Mix®** — India's premium refreshing fruit drink brand. Built with **React 19**, **Vite**, **Three.js / React Three Fiber**, **GSAP**, **Framer Motion**, and **Lenis Smooth Scroll**.
+A world-class, immersive, 3D interactive web application for **Meo Mix** — India's premium refreshing fruit drink brand. Built with **React 19**, **Vite**, **Three.js / React Three Fiber**, **GSAP**, **Framer Motion**, and **Lenis Smooth Scroll**.
 
 ---
 
@@ -112,11 +112,11 @@ In the project directory, you can run:
 
 ## 🔒 Brand & Asset Guidelines
 
-- **Logo Assets**: The Meo Mix® logo (`meo_mix_logo.png` & `meo_mix_logo_white.png`) are locked commercial assets and must not be redrawn or modified.
+- **Logo Assets**: The Meo Mix logo (`meo_mix_logo.png` & `meo_mix_logo_white.png`) are locked commercial assets and must not be redrawn or modified.
 - **Product Packaging**: Bottle renders are official commercial product images mapped to exact brand color specifications.
 
 ---
 
 ## 📄 License & Credits
 
-© **Meo Mix® Beverages Pvt. Ltd.** All rights reserved. Crafted with care in India 🇮🇳.
+© **Meo Mix Beverages Pvt. Ltd.** All rights reserved. Crafted with care in India 🇮🇳.

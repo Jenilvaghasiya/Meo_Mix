@@ -1,6 +1,6 @@
-# 🍹 Meo Mix® Official Website Repository
+# 🍹 Meo Mix Official Website Repository
 
-Welcome to the official repository for **Meo Mix®** — World-Class Refreshing Fruit Drinks & Beverages.
+Welcome to the official repository for **Meo Mix** — World-Class Refreshing Fruit Drinks & Beverages.
 
 ---
 
@@ -20,7 +20,7 @@ Meo_Mix/
 
 ## 🚀 Quick Start
 
-To launch the **Meo Mix®** web application:
+To launch the **Meo Mix** web application:
 
 ```bash
 # Navigate to the web UI directory
@@ -37,4 +37,4 @@ For complete technical documentation, architectural details, and production buil
 
 ---
 
-© **Meo Mix® Beverages Pvt. Ltd.** All rights reserved.
+© **Meo Mix Beverages Pvt. Ltd.** All rights reserved.

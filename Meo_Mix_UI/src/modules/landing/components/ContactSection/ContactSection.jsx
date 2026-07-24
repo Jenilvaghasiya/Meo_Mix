@@ -92,7 +92,6 @@ export const ContactSection = () => {
                 height="190"
                 style={{ border: 0, borderRadius: '16px' }}
                 allowFullScreen=""
-                loading="lazy"
               />
             </div>
           </div>
@@ -103,7 +102,7 @@ export const ContactSection = () => {
               <div className={styles.successBox}>
                 <FiCheckCircle className={styles.checkIcon} />
                 <h3>Message Sent Successfully!</h3>
-                <p>Thank you for reaching out to MEO MIX®. Our team will respond shortly.</p>
+                <p>Thank you for reaching out to MEO MIX. Our team will respond shortly.</p>
               </div>
             ) : (
               <form className={styles.contactForm} onSubmit={handleSubmit}>

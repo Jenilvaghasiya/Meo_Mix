@@ -19,8 +19,8 @@ export const ProductsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Our Product Collection | MEO MIX®</title>
-        <meta name="description" content="Discover the full lineup of MEO MIX® premium fruit beverage flavors. Delicious taste in every bottle." />
+        <title>Our Product Collection | MEO MIX</title>
+        <meta name="description" content="Discover the full lineup of MEO MIX premium fruit beverage flavors. Delicious taste in every bottle." />
       </Helmet>
 
       {/* Top Full-Bleed Video Hero Section for Products Page */}
@@ -31,7 +31,7 @@ export const ProductsPage = () => {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
         >
           <source src="/Video/Meo_Mix_Product.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.

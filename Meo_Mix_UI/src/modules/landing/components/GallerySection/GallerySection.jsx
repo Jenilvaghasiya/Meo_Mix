@@ -27,7 +27,7 @@ export const GallerySection = () => {
             Visual <span className="gradient-text">Gallery</span>
           </h2>
           <p className={styles.subtext}>
-            Explore our complete lineup of all 8 MEO MIX® products captured in high-definition luxury showcase.
+            Explore our complete lineup of all 8 MEO MIX products captured in high-definition luxury showcase.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export const GallerySection = () => {
         {selectedImg && (
           <div className={styles.lightboxContent}>
             <img src={selectedImg.img} alt={selectedImg.title} className={styles.previewImg} />
-            <p className={styles.previewCaption}>{selectedImg.title} — MEO MIX® {selectedImg.flavor} ({selectedImg.volume}).</p>
+            <p className={styles.previewCaption}>{selectedImg.title} — MEO MIX {selectedImg.flavor} ({selectedImg.volume}).</p>
           </div>
         )}
       </Modal>

@@ -18,7 +18,7 @@ export const Footer = () => {
               <Link to="/" className={styles.logoLink}>
                 <img
                   src="/logo/meo_mix_logo_white.png"
-                  alt="MEO MIX® Logo White"
+                  alt="MEO MIX Logo White"
                   className={styles.footerLogo}
                 />
               </Link>

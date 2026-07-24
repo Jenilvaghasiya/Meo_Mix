@@ -15,8 +15,8 @@ export const DistributorPage = () => {
   return (
     <>
       <Helmet>
-        <title>Distributor & Franchise Opportunities | MEO MIX®</title>
-        <meta name="description" content="Become an authorized MEO MIX® distributor. High retail margins, marketing collateral support, and nationwide distribution." />
+        <title>Distributor & Franchise Opportunities | MEO MIX</title>
+        <meta name="description" content="Become an authorized MEO MIX distributor. High retail margins, marketing collateral support, and nationwide distribution." />
       </Helmet>
 
       <div className={styles.distributorPageWrapper}>

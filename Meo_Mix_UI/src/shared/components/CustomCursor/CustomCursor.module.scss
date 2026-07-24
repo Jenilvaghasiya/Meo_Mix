@@ -1,0 +1,45 @@
+@use '../../../styles/variables.scss' as *;
+
+.cursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--flavor-accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px var(--flavor-glow);
+}
+
+.cursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--flavor-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 25px var(--flavor-glow);
+}
+
+.cursorLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--flavor-primary);
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .cursorDot, .cursorRing {
+    display: none;
+  }
+}

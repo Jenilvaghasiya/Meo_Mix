@@ -1,0 +1,107 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.testimonialSection {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf4fa 100%);
+  padding: 6rem 0;
+}
+
+.container {
+  @include container;
+  @include flex-column;
+  gap: 3.5rem;
+}
+
+.header {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.swiperContainer {
+  width: 100%;
+  padding: 1rem 0.5rem 4rem 0.5rem !important;
+
+  :global(.swiper-wrapper) {
+    align-items: stretch;
+  }
+
+  :global(.swiper-slide) {
+    height: auto;
+    display: flex;
+  }
+}
+
+.reviewCard {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 92, 159, 0.16);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  box-shadow: 0 15px 35px rgba(13, 92, 159, 0.08);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(13, 92, 159, 0.16);
+    border-color: rgba(13, 92, 159, 0.35);
+  }
+}
+
+.quoteIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0D5C9F 0%, #38B6FF 100%);
+  color: #ffffff;
+  @include flex-center;
+  font-size: 1.25rem;
+  box-shadow: 0 6px 16px rgba(13, 92, 159, 0.22);
+}
+
+.starRow {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.starFilled {
+  color: #f59e0b;
+  fill: #f59e0b;
+  font-size: 1.05rem;
+}
+
+.quoteText {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.65;
+  font-style: italic;
+  flex: 1;
+}
+
+.reviewerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-top: 1px solid rgba(13, 92, 159, 0.08);
+  padding-top: 1rem;
+
+  .name {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #1e293b;
+  }
+
+  .role {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+}

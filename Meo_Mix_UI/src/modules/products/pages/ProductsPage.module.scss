@@ -1,0 +1,373 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.productVideoHero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+
+  @media (max-width: 768px) {
+    height: 55vh;
+    min-height: 360px;
+    max-height: 520px;
+  }
+}
+
+.productVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pageHeader {
+  position: relative;
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.container {
+  @include container;
+  @include flex-column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  color: $text-muted;
+  max-width: 620px;
+  line-height: 1.6;
+}
+
+.searchWrapper {
+  width: 100%;
+  max-width: 520px;
+  margin-top: 0.5rem;
+}
+
+.productsGridSection {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0 6rem 0;
+  background: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.productCard {
+  position: relative;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 92, 159, 0.16);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 14px 35px rgba(13, 92, 159, 0.07);
+  overflow: hidden;
+  height: 500px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(13, 92, 159, 0.18);
+    border-color: rgba(13, 92, 159, 0.35);
+
+    .bottleImg {
+      transform: scale(1.08);
+    }
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: rgba(13, 92, 159, 0.08);
+  color: #0D5C9F;
+  border: 1px solid rgba(13, 92, 159, 0.18);
+}
+
+.volumeTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.2rem 0.55rem;
+  border-radius: 16px;
+}
+
+.bottleImgHolder {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  @include flex-center;
+  margin: 0.5rem 0;
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.bottleImg {
+  height: 100%;
+  max-height: 210px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.16));
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.flavorTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0D5C9F;
+  margin: 0;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(13, 92, 159, 0.08);
+}
+
+.priceMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceLabel {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.priceVal {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #0D5C9F;
+  font-family: var(--font-heading);
+}
+
+/* 2-Column Split Modal Content Styling */
+.modalSplitContent {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.modalLeftImgBox {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(240, 248, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 100%);
+  border: 1px solid rgba(13, 92, 159, 0.12);
+  @include flex-center;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.modalGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.modalBottleImg {
+  height: 100%;
+  max-height: 270px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.22));
+  z-index: 2;
+}
+
+.modalRightDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.modalHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.modalBadge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: rgba(13, 92, 159, 0.08);
+  color: #0D5C9F;
+  border: 1px solid rgba(13, 92, 159, 0.18);
+}
+
+.modalVolumeTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.2rem 0.55rem;
+  border-radius: 16px;
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1e293b;
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.modalTagline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0D5C9F;
+  margin: 0;
+}
+
+.modalDesc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nutritionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 1rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.nutriBox {
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.nutriLabel {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nutriVal {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #0D5C9F;
+}

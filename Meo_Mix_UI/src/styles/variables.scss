@@ -1,0 +1,38 @@
+// Global Color Tokens (Official Meo Mix Logo Brand Palette)
+$primary-blue: #0D5C9F;
+$dark-blue: #063A66;
+$leaf-green: #39B54A;
+$light-green: #76D76B;
+$white: #FFFFFF;
+$bg-light: #FFFFFF;
+$text-dark: #1E293B;
+$text-muted: #64748B;
+$border-light: rgba(13, 92, 159, 0.12);
+
+:root {
+  --flavor-primary: #0D5C9F;
+  --flavor-accent: #39B54A;
+  --flavor-secondary: #063A66;
+  --flavor-bg: #FFFFFF;
+  --flavor-gradient: linear-gradient(135deg, #FFFFFF 0%, #F8FCFF 60%, #EEF6FF 100%);
+  --flavor-glow: rgba(13, 92, 159, 0.15);
+  --flavor-text: #1E293B;
+
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 4px 12px rgba(13, 92, 159, 0.06);
+  --shadow-md: 0 10px 30px rgba(13, 92, 159, 0.08);
+  --shadow-lg: 0 20px 50px rgba(13, 92, 159, 0.12);
+  --shadow-glow: 0 0 40px var(--flavor-glow);
+
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(13, 92, 159, 0.1);
+  --glass-blur: blur(20px);
+}

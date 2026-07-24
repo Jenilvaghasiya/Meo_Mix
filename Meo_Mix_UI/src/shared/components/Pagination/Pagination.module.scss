@@ -1,0 +1,36 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.pagination {
+  @include flex-center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.pageBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @include glass-card(rgba(255, 255, 255, 0.7), 10px);
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--flavor-primary);
+    color: $white;
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    background: var(--flavor-primary);
+    color: $white;
+    box-shadow: 0 4px 12px var(--flavor-glow);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}

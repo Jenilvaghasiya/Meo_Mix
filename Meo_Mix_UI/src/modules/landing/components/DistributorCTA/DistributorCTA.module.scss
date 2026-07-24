@@ -1,0 +1,156 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.ctaSection {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @include container;
+}
+
+.ctaCard {
+  position: relative;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, $leaf-green 0%, $light-green 100%);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(57, 181, 74, 0.3);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    gap: 1.2rem;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  @media (max-width: 900px) {
+    align-items: center;
+  }
+}
+
+.brandHeaderGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.ctaWhiteLogo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: $white;
+  line-height: 1.15;
+
+  span {
+    color: $dark-blue;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+}
+
+.desc {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 520px;
+
+  @media (max-width: 640px) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+.ctaBtnHolder {
+  margin-top: 0.5rem;
+}
+
+.logoShowcase {
+  @include flex-center;
+  position: relative;
+  padding: 1.5rem;
+
+  @media (max-width: 640px) {
+    padding: 0.5rem 0 0 0;
+  }
+}
+
+.ctaRightWhiteLogo {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.28));
+  animation: floatLogo 4s ease-in-out infinite;
+
+  @media (max-width: 900px) {
+    max-width: 320px;
+  }
+
+  @media (max-width: 640px) {
+    max-width: 160px;
+  }
+}
+
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.inquiryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.successState {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem 0;
+
+  h3 {
+    font-size: 1.6rem;
+    color: $leaf-green;
+  }
+
+  p {
+    color: $text-muted;
+  }
+}
+
+.successIcon {
+  font-size: 4rem;
+  color: $leaf-green;
+}

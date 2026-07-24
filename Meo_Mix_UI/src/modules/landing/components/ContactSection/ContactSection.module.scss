@@ -1,0 +1,143 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.contactSection {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @include container;
+  @include flex-column;
+  gap: 3.5rem;
+}
+
+.header {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+
+  .subtext {
+    max-width: 550px;
+    color: $text-muted;
+  }
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoCard {
+  border-radius: var(--radius-md);
+  @include glass-card(rgba(255, 255, 255, 0.8), 16px);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  h4 {
+    font-size: 1rem;
+    color: var(--flavor-primary);
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: $text-muted;
+  }
+}
+
+.iconCircle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(13, 92, 159, 0.08);
+  color: var(--flavor-primary);
+  @include flex-center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.mapWidget {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.formCol {
+  border-radius: var(--radius-xl);
+  @include glass-card(rgba(255, 255, 255, 0.85), 24px);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.textareaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(13, 92, 159, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  color: var(--text-dark);
+  outline: none;
+  font-family: var(--font-body);
+
+  &:focus {
+    border-color: var(--flavor-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px var(--flavor-glow);
+  }
+}
+
+.successBox {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 3rem 0;
+
+  h3 {
+    font-size: 1.6rem;
+    color: var(--flavor-primary);
+  }
+
+  p {
+    color: $text-muted;
+  }
+}
+
+.checkIcon {
+  font-size: 4rem;
+  color: var(--flavor-primary);
+}

@@ -1,0 +1,301 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #042442;
+  color: $white;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footerContent {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2rem 1.2rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @media (max-width: 640px) {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.footerLogo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandTagline {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @media (max-width: 640px) {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+  }
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+
+  p {
+    margin: 0;
+    line-height: 1.45;
+    color: #e2e8f0;
+  }
+
+  a {
+    color: #38b6ff;
+    transition: color 0.2s ease;
+    font-weight: 600;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.contactLabel {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  color: #38b6ff;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+
+  a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    @include flex-center;
+    font-size: 1.05rem;
+    color: $white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #38b6ff;
+      border-color: #38b6ff;
+      color: $white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(56, 182, 255, 0.4);
+    }
+  }
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  a {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: #38b6ff;
+      transform: translateX(4px);
+    }
+  }
+}
+
+.colTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.newsletterCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emailInput {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: $white;
+  font-size: 0.95rem;
+  outline: none;
+
+  &::placeholder {
+    color: #94a3b8;
+  }
+
+  &:focus {
+    border-color: var(--flavor-accent);
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.submitBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--flavor-primary), var(--flavor-accent));
+  color: $white;
+  @include flex-center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.privacyNote {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+}
+
+.bottomBar {
+  @include flex-between;
+  padding-top: 2rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  strong {
+    color: #e2e8f0;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.85rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  a {
+    color: #cbd5e1;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #38b6ff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.dividerDot {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.heartText {
+  color: #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.heartIcon {
+  color: #ef4444;
+  font-size: 1rem;
+  fill: #ef4444;
+}

@@ -1,0 +1,46 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.2rem;
+  color: var(--flavor-primary);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 3rem 0.9rem 3rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid rgba(13, 92, 159, 0.15);
+  @include glass-card(rgba(255, 255, 255, 0.75), 14px);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: var(--flavor-primary);
+    box-shadow: 0 0 0 4px var(--flavor-glow);
+    background: #ffffff;
+  }
+}
+
+.clearBtn {
+  position: absolute;
+  right: 1.2rem;
+  color: $text-muted;
+  font-size: 1.1rem;
+
+  &:hover {
+    color: var(--text-dark);
+  }
+}

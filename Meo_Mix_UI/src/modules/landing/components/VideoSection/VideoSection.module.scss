@@ -1,0 +1,84 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.fullBleedVideoSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    height: 55vh;
+    min-height: 360px;
+    max-height: 520px;
+  }
+}
+
+.fullScreenVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.fullVideoOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 30, 54, 0.25) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(3, 18, 34, 0.5) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.overlayControlsContainer {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.controlsBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: $white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.controlBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: $white;
+  @include flex-center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #38b6ff;
+    color: #000000;
+    transform: scale(1.08);
+  }
+}

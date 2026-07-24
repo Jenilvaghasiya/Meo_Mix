@@ -1,0 +1,126 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.showcaseSection {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @include container;
+  @include flex-column;
+  gap: 4rem;
+}
+
+.header {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.showcaseRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  @include glass-card(rgba(255, 255, 255, 0.8), 24px);
+  box-shadow: var(--shadow-lg);
+
+  &.rowReverse {
+    grid-template-columns: 1.2fr 1fr;
+    .bottleSide { order: 2; }
+    .contentSide { order: 1; }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+    padding: 2rem;
+    .bottleSide { order: 1 !important; }
+    .contentSide { order: 2 !important; }
+  }
+}
+
+.bottleSide {
+  position: relative;
+  @include flex-center;
+}
+
+.ambientGlow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+.productBottleImg {
+  height: 380px;
+  width: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.18));
+  cursor: pointer;
+}
+
+.contentSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: rgba(13, 92, 159, 0.08);
+  color: var(--flavor-primary);
+}
+
+.productTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.productTagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--flavor-primary);
+}
+
+.productDesc {
+  font-size: 1rem;
+  color: $text-muted;
+  line-height: 1.6;
+}
+
+.metricChips {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+
+  span {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(13, 92, 159, 0.1);
+  }
+}

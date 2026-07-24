@@ -1,0 +1,76 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1.2rem;
+  color: $text-muted;
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(13, 92, 159, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.hasIcon {
+    padding-left: 3rem;
+  }
+
+  &::placeholder {
+    color: #94a3b8;
+  }
+
+  &:focus {
+    border-color: var(--flavor-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px var(--flavor-glow);
+
+    + .inputIcon {
+      color: var(--flavor-primary);
+    }
+  }
+}
+
+.hasError {
+  .input {
+    border-color: #ef4444;
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+    }
+  }
+}
+
+.errorMessage {
+  font-size: 0.8rem;
+  color: #ef4444;
+  font-weight: 500;
+}

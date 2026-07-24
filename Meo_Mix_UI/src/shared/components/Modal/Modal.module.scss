@@ -1,0 +1,60 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  @include flex-center;
+  padding: 1.5rem;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 58, 102, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.dialog {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 92, 159, 0.18);
+  box-shadow: 0 25px 60px rgba(6, 58, 102, 0.25);
+  z-index: 10;
+}
+
+.header {
+  @include flex-between;
+  padding: 1.5rem 2.0rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  h3 {
+    font-size: 1.4rem;
+    color: var(--flavor-primary);
+  }
+}
+
+.closeBtn {
+  font-size: 1.5rem;
+  color: $text-muted;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  @include flex-center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
+  }
+}
+
+.body {
+  padding: 2.0rem;
+}

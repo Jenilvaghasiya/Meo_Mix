@@ -1,0 +1,71 @@
+@use './variables.scss' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.heading-display {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.heading-1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+}
+
+.heading-2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 700;
+}
+
+.heading-3 {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 700;
+}
+
+body, p, span, li, button, input, textarea {
+  font-family: var(--font-body);
+}
+
+.text-lead {
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  color: $text-muted;
+  line-height: 1.6;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0D5C9F 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.giant-backdrop-text {
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 20vw, 22rem);
+  font-weight: 900;
+  color: rgba(13, 92, 159, 0.04);
+  user-select: none;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  white-space: nowrap;
+}

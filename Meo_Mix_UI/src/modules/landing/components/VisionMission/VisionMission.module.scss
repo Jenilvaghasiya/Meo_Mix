@@ -1,0 +1,149 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.visionMissionSection {
+  position: relative;
+  width: 100%;
+  padding: 5rem 2rem;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.zigZagRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.textSideLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.textSideRight {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+
+.verticalAccentLine {
+  width: 4px;
+  min-height: 140px;
+  background: linear-gradient(180deg, #0D5C9F 0%, #38B6FF 100%);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.verticalAccentLineRight {
+  width: 4px;
+  min-height: 140px;
+  background: linear-gradient(180deg, #0D5C9F 0%, #38B6FF 100%);
+  flex-shrink: 0;
+  border-radius: 4px;
+  order: 2;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rowTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.accentText {
+  background: linear-gradient(135deg, #0D5C9F 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.rowDesc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+  max-width: 520px;
+}
+
+/* Image Side with Offset Corner Frames */
+.imageSideRight,
+.imageSideLeft {
+  position: relative;
+  @include flex-center;
+  padding: 1.5rem;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(13, 92, 159, 0.12);
+  z-index: 2;
+
+  @media (max-width: 640px) {
+    height: 240px;
+  }
+}
+
+.rowImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* MEO MIX Brand Blue Offset Border Frames */
+.offsetBorderFrameTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  border-top: 4px solid #0D5C9F;
+  border-right: 4px solid #38B6FF;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.offsetBorderFrameBottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  border-bottom: 4px solid #0D5C9F;
+  border-left: 4px solid #38B6FF;
+  z-index: 1;
+  pointer-events: none;
+}

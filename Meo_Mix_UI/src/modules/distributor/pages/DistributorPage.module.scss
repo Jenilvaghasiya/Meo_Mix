@@ -1,0 +1,30 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.distributorPageWrapper {
+  padding-top: 4.5rem;
+
+  @media (max-width: 768px) {
+    padding-top: 5.5rem;
+  }
+}
+
+.partnerTiersSection {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @include container;
+  @include flex-column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.tableWrapper {
+  width: 100%;
+  margin-top: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

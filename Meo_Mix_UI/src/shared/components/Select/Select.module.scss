@@ -1,0 +1,61 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  padding: 0.9rem 2.8rem 0.9rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(13, 92, 159, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  color: var(--text-dark);
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:focus {
+    border-color: var(--flavor-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px var(--flavor-glow);
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: 1.2rem;
+  font-size: 1rem;
+  color: $text-muted;
+  pointer-events: none;
+}
+
+.hasError {
+  .select {
+    border-color: #ef4444;
+  }
+}
+
+.errorMessage {
+  font-size: 0.8rem;
+  color: #ef4444;
+}

@@ -1,0 +1,216 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.aboutSection {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @include container;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.visualCard {
+  position: relative;
+  border-radius: 28px;
+  padding: 0;
+  overflow: hidden;
+  height: 480px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    .heroFruitImg {
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 360px;
+  }
+}
+
+.imageOverlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heroFruitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glassBadge {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .badgeNumber {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #38b6ff;
+  }
+
+  .badgeText {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.subText {
+  font-size: 1rem;
+  color: $text-muted;
+  line-height: 1.6;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.statCard {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(13, 92, 159, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.statIcon {
+  font-size: 1.4rem;
+  color: var(--flavor-primary);
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: $text-muted;
+  font-weight: 600;
+}
+
+.visionMissionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+}
+
+.vmCard {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(13, 92, 159, 0.12);
+  padding: 2.2rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  box-shadow: 0 15px 35px rgba(13, 92, 159, 0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(13, 92, 159, 0.14);
+    border-color: rgba(13, 92, 159, 0.25);
+  }
+}
+
+.vmIconWrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0D5C9F 0%, #38B6FF 100%);
+  color: #ffffff;
+  @include flex-center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(13, 92, 159, 0.25);
+}
+
+.vmIcon {
+  font-size: 1.6rem;
+}
+
+.vmMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vmTag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0D5C9F;
+}
+
+.vmTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.vmText {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}

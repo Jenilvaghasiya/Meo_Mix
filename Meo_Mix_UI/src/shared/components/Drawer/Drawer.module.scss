@@ -1,0 +1,61 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 58, 102, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.drawer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  @include glass-card(rgba(255, 255, 255, 0.95), 24px);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+
+  &.right { right: 0; }
+  &.left { left: 0; }
+}
+
+.header {
+  @include flex-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  h3 {
+    font-size: 1.25rem;
+    color: var(--flavor-primary);
+  }
+}
+
+.closeBtn {
+  font-size: 1.4rem;
+  color: $text-muted;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  @include flex-center;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
+  }
+}
+
+.content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}

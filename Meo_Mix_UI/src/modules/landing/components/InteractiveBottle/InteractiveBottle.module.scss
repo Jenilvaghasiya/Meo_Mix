@@ -1,0 +1,157 @@
+@use '../../../../styles/variables.scss' as *;
+@use '../../../../styles/mixins.scss' as *;
+
+.interactiveSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  @include container;
+  @include flex-column;
+  gap: 3.5rem;
+}
+
+.header {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+
+  .subtext {
+    max-width: 550px;
+    color: $text-muted;
+  }
+}
+
+.stage {
+  position: relative;
+  height: 520px;
+  @include glass-card(rgba(255, 255, 255, 0.8), 24px);
+  border-radius: var(--radius-xl);
+  @include flex-center;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 480px;
+    padding: 2.2rem 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+.stageGlow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: var(--flavor-glow);
+  filter: blur(70px);
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    width: 240px;
+    height: 240px;
+    filter: blur(50px);
+  }
+}
+
+.bottleCenterHolder {
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    order: 2;
+    margin: 0.5rem 0;
+  }
+}
+
+.stageBottleImg {
+  height: 440px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 768px) {
+    height: 260px;
+  }
+}
+
+.hotspot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+
+  &.hotspotLeft1 {
+    top: 30%;
+    left: 10%;
+
+    @media (max-width: 768px) {
+      position: relative;
+      top: auto;
+      left: auto;
+      order: 1;
+      width: 100%;
+      max-width: 320px;
+      justify-content: center;
+    }
+  }
+
+  &.hotspotRight1 {
+    bottom: 30%;
+    right: 10%;
+
+    @media (max-width: 768px) {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      order: 3;
+      width: 100%;
+      max-width: 320px;
+      justify-content: center;
+    }
+  }
+}
+
+.pinDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--flavor-primary);
+  border: 3px solid $white;
+  box-shadow: 0 0 15px var(--flavor-glow);
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.hotspotCard {
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-md);
+  @include glass-card(rgba(255, 255, 255, 0.92), 16px);
+  box-shadow: var(--shadow-md);
+
+  h5 {
+    font-size: 0.95rem;
+    color: var(--flavor-primary);
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $text-muted;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+}

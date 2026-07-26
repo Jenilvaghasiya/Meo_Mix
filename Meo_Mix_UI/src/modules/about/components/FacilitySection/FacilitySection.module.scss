@@ -42,7 +42,7 @@
 }
 
 .brandHighlight {
-  background: linear-gradient(135deg, #0D5C9F 0%, #39B54A 100%); // Official Logo Blue & Green Gradient!
+  background: linear-gradient(135deg, #0D5C9F 0%, #39B54A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
@@ -73,7 +73,6 @@
   max-width: 520px;
   height: 330px;
 
-  // Offset Logo Green Border Frame (Matching MEO MIX Logo Color)
   &::before {
     content: '';
     position: absolute;
@@ -87,7 +86,16 @@
   }
 
   @media (max-width: 600px) {
-    height: 240px;
+    height: 230px;
+    max-width: 90%;
+    margin: 0 auto;
+
+    &::before {
+      top: 8px;
+      left: -8px;
+      right: 8px;
+      bottom: -8px;
+    }
   }
 }
 
@@ -121,7 +129,7 @@
   left: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  background: rgba(57, 181, 74, 0.92); // Logo Green Badge!
+  background: rgba(57, 181, 74, 0.92);
   backdrop-filter: blur(8px);
   color: #FFFFFF;
   font-family: var(--font-heading);
@@ -130,4 +138,69 @@
   letter-spacing: 0.05em;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   z-index: 3;
+}
+
+// Mission & Vision Cards Section
+.missionVisionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4.5rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.mvCard {
+  background: #FFF9F2;
+  border: 1px solid rgba(255, 138, 0, 0.15);
+  border-radius: 20px;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(13, 92, 159, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(13, 92, 159, 0.08);
+  }
+}
+
+.mvHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: #E8F7EA;
+  color: #39B54A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.mvTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.mvDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
 }

@@ -76,7 +76,11 @@ export const ProductsPage = () => {
                 className={styles.productCard}
               >
                 <div className={styles.cardHeader}>
-                  <span className={styles.badge}>{flavor.badge}</span>
+                  {flavor.badge ? (
+                    <span className={styles.badge}>{flavor.badge}</span>
+                  ) : (
+                    <span className={styles.badgeSpacer} />
+                  )}
                   <span className={styles.volumeTag}>160ML</span>
                 </div>
 
@@ -103,6 +107,48 @@ export const ProductsPage = () => {
                   >
                     View Details
                   </Button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features Section */}
+      <section className={styles.productFeaturesSection}>
+        <div className={styles.container}>
+          <div className={styles.featuresHeader}>
+            <div className="glass-pill">QUALITY PROMISE</div>
+            <h2 className="heading-1">
+              Product <span className="gradient-text">Features</span>
+            </h2>
+            <p className={styles.featuresLeadText}>
+              Our fruit beverages are crafted to deliver refreshing taste with the goodness of real fruit pulp.
+            </p>
+          </div>
+
+          <div className={styles.productFeaturesGrid}>
+            {[
+              { title: 'Fruit Pulp Based', desc: 'Crafted using quality fruit pulp for authentic taste.' },
+              { title: 'Rich & Refreshing Taste', desc: 'Curated fruit formulations bursting with refreshment.' },
+              { title: 'Ready to Drink', desc: 'Convenient 160ml bottled refreshment for any time of day.' },
+              { title: 'Hygienically Packed', desc: 'Bottled in aseptic automated facilities under strict standards.' },
+              { title: 'For All Age Groups', desc: 'Delicious, safe fruit beverages enjoyed by kids & adults alike.' },
+              { title: 'Premium Packaging', desc: 'Vibrant oxygen-barrier bottle packaging preserving freshness.' },
+              { title: 'Manufactured Under Standards', desc: 'ISO certified quality control from raw material to dispatch.' }
+            ].map((feat, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                className={styles.featureItemCard}
+              >
+                <div className={styles.checkIconBullet}>✓</div>
+                <div>
+                  <h4 className={styles.featureItemTitle}>{feat.title}</h4>
+                  <p className={styles.featureItemDesc}>{feat.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -139,13 +185,13 @@ export const ProductsPage = () => {
                   <span className={styles.nutriLabel}>Volume</span>
                   <span className={styles.nutriVal}>160ml</span>
                 </div>
-                <div className={styles.nutriBox}>
-                  <span className={styles.nutriLabel}>Price</span>
-                  <span className={styles.nutriVal}>Rs. 10</span>
+                <div className={styles.nutriBox} style={{ background: '#E8F7EA', borderColor: 'rgba(57, 181, 74, 0.2)' }}>
+                  <span className={styles.nutriLabel} style={{ color: '#2E7D32' }}>Price</span>
+                  <span className={styles.nutriVal} style={{ color: '#39B54A' }}>Rs. 10</span>
                 </div>
-                <div className={styles.nutriBox}>
-                  <span className={styles.nutriLabel}>Energy</span>
-                  <span className={styles.nutriVal}>{selectedFlavor.nutrition.calories}</span>
+                <div className={styles.nutriBox} style={{ background: '#FFF5E6', borderColor: 'rgba(255, 138, 0, 0.2)' }}>
+                  <span className={styles.nutriLabel} style={{ color: '#D97706' }}>Energy</span>
+                  <span className={styles.nutriVal} style={{ color: '#FF8A00' }}>{selectedFlavor.nutrition.calories}</span>
                 </div>
                 <div className={styles.nutriBox}>
                   <span className={styles.nutriLabel}>Vitamin C</span>

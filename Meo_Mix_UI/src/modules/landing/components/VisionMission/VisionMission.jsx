@@ -1,13 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FiCheckCircle } from 'react-icons/fi';
 import styles from './VisionMission.module.scss';
 
 export const VisionMission = () => {
+  const missionBulletPoints = [
+    'Deliver authentic fruit taste in every bottle.',
+    'Maintain the highest food safety & quality standards.',
+    'Continuously innovate new vibrant flavours.',
+    'Build long-term relationships with distributors & retailers.',
+    'Expand globally while proudly representing Indian manufacturing.'
+  ];
+
   return (
     <section className={styles.visionMissionSection}>
       <div className={styles.container}>
 
-        {/* Row 1: Our Mission (Text Left, Image Right) */}
+        {/* ROW 1: OUR MISSION (Text Left, Image Right) */}
         <div className={styles.zigZagRow}>
           {/* Mission Text Block */}
           <motion.div
@@ -23,12 +32,21 @@ export const VisionMission = () => {
                 Our <span className={styles.accentText}>Mission</span>
               </h2>
               <p className={styles.rowDesc}>
-                At MEO MIX, our mission is to deliver the highest quality products using the finest ingredients and innovative processes, continuously exploring new flavors and methods to keep our offerings exciting and relevant, while prioritizing health and wellness to support our customers' active and balanced lifestyles. Together, we strive to refresh, inspire, and make a positive impact on the world, one sip at a time.
+                Our mission is to provide safe, refreshing, and high-quality fruit beverages that bring happiness to every consumer.
               </p>
+              <div className={styles.striveHeader}>We strive to:</div>
+              <ul className={styles.striveList}>
+                {missionBulletPoints.map((point, idx) => (
+                  <li key={idx} className={styles.striveItem}>
+                    <FiCheckCircle className={styles.checkIcon} />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
 
-          {/* Mission Image Block (Top-Right Offset Border Frame) */}
+          {/* Mission Image Block */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,9 +65,9 @@ export const VisionMission = () => {
           </motion.div>
         </div>
 
-        {/* Row 2: Our Vision (Image Left, Text Right) */}
+        {/* ROW 2: OUR VISION (Image Left, Text Right) */}
         <div className={`${styles.zigZagRow} ${styles.reverseRow}`}>
-          {/* Vision Image Block (Bottom-Left Offset Border Frame) */}
+          {/* Vision Image Block */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -80,8 +98,8 @@ export const VisionMission = () => {
               <h2 className={styles.rowTitle}>
                 Our <span className={styles.accentText}>Vision</span>
               </h2>
-              <p className={styles.rowDesc}>
-                At MEO MIX, our vision is to be the beacon of refreshment, inspiring joyous moments and unforgettable experiences. We aspire to be the preferred choice for individuals seeking innovative and delightful beverages that not only quench their thirst but elevate their spirits.
+              <p className={styles.rowDesc} style={{ fontSize: '1.08rem', lineHeight: '1.8' }}>
+                To become one of India’s most trusted fruit beverage brands by delivering exceptional quality, innovation, and customer satisfaction while expanding our presence across global markets.
               </p>
             </div>
           </motion.div>

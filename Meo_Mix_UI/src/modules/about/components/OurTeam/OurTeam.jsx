@@ -6,35 +6,35 @@ import styles from './OurTeam.module.scss';
 export const OurTeam = () => {
   const directors = [
     {
+      name: 'MR. JITEN PATEL',
+      role: 'FOUNDER & MANAGING PARTNER',
+      bio1: 'With over 30 years of experience in the fruit pulp industry since 1994, Jiten Patel has been the driving force behind the company’s foundation.',
+      bio2: 'His deep industry knowledge, commitment to quality, and long-term vision have played a vital role in building Meo Mix into a trusted beverage brand.',
+      accentColor: '#39B54A', // Logo Green
+      initials: 'JP'
+    },
+    {
+      name: 'MR. HARSHIL PATEL',
+      role: 'FOUNDER & MANAGING PARTNER',
+      bio1: 'Harshil Patel brings strong expertise in Food Science, Nutrition, and Microbiology, contributing significantly to product research, formulation, and quality development.',
+      bio2: 'His technical knowledge ensures that every Meo Mix product meets high standards of taste, nutrition, and safety.',
+      accentColor: '#0D5C9F', // Logo Blue
+      initials: 'HP'
+    },
+    {
       name: 'MR. MAULIK PATEL',
-      role: "COMPANY'S CHIEF EXECUTIVE OFFICER (C.E.O.)",
-      bio1: 'Mr. Maulik Patel serves as the Managing Director and Chief Executive Officer (C.E.O.) at our esteemed company. A distinguished leader with vision, he leads our strategic growth, product innovation, and beverage brand operations.',
-      bio2: 'Mr. Patel assumes a pivotal role, meticulously overseeing quality assurance and conducting comprehensive analyses across all MEO MIX beverages. His leadership and commitment have been instrumental in the continued success and expansion of our business.',
-      accentColor: '#39B54A', // Official Logo Green
+      role: 'CO-FOUNDER & MANAGING PARTNER',
+      bio1: 'Maulik Patel leads the company’s Sales, Marketing, and Business Development initiatives.',
+      bio2: 'With extensive experience in market expansion, branding, and distribution management, he has been instrumental in strengthening Meo Mix’s presence across multiple states and international markets.',
+      accentColor: '#39B54A', // Logo Green
       initials: 'MP'
-    },
-    {
-      name: 'MR. RAJESH PATEL',
-      role: "COMPANY'S CHIEF MANAGING DIRECTOR (C.M.D.)",
-      bio1: 'Mr. Rajesh Patel holds the position of Managing Director at our organization. A graduate with a solid educational background, he possesses robust business acumen and extensive industry experience.',
-      bio2: 'His multifaceted role encompasses the efficient management of production, marketing, sales, and accounts within the organization. Mr. Patel\'s dynamic leadership contributes significantly to operational excellence across all manufacturing divisions.',
-      accentColor: '#0D5C9F', // Official Logo Blue
-      initials: 'RP'
-    },
-    {
-      name: 'MR. ASHOK PATEL',
-      role: "COMPANY'S CHIEF MARKETING DIRECTOR (C.M.O.)",
-      bio1: 'Mr. Ashok Patel assumes the pivotal role of Chief Marketing Officer (C.M.O.) within our organization. Armed with a comprehensive background, he is entrusted with managing market research, strategic planning, and spearheading nationwide sales efforts.',
-      bio2: 'His expertise and leadership in critical market engagement strategies ensure dynamic brand visibility. Mr. Patel\'s commitment to excellence plays a key role in driving the company\'s retail expansion across 50+ cities.',
-      accentColor: '#39B54A', // Official Logo Green
-      initials: 'AP'
     }
   ];
 
   return (
     <section className={styles.ourTeamSection}>
       <div className={styles.container}>
-        {/* Section Header Matching WhyChoose Screenshot Layout */}
+        {/* Section Header */}
         <div className={styles.sectionHeader}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export const OurTeam = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className={styles.sectionSubtitle}
           >
-            A dedicated board of executive directors driving innovation, quality standards, and nationwide expansion.
+            A dedicated team of visionary founders and industry experts driving innovation, quality, and global expansion.
           </motion.p>
         </div>
 

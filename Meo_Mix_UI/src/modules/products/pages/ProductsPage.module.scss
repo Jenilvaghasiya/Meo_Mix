@@ -340,34 +340,132 @@
 .nutritionGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.8rem;
+  gap: 0.75rem;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 }
 
 .nutriBox {
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 0.5rem;
   border-radius: 16px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #EEF6FF;
+  border: 1px solid rgba(13, 92, 159, 0.18);
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 0.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .nutriLabel {
-  font-size: 0.72rem;
-  color: #64748b;
-  font-weight: 700;
+  font-size: 0.68rem;
+  color: #0D5C9F;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nutriVal {
-  font-size: 1.05rem;
+  font-family: var(--font-heading);
+  font-size: clamp(0.85rem, 1.1vw, 1.02rem);
   font-weight: 900;
   color: #0D5C9F;
+  white-space: nowrap; // Guarantees 100% RDI fits cleanly on 1 single line!
+}
+
+// Product Features Section Styling
+.productFeaturesSection {
+  padding: 5rem 0;
+  background-color: #FFF9F2;
+  border-top: 1px solid rgba(255, 138, 0, 0.12);
+}
+
+.featuresHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.featuresLeadText {
+  max-width: 580px;
+  font-size: 1.05rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.productFeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+
+  @media (max-width: 950px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featureItemCard {
+  background: #FFFFFF;
+  border: 1px solid rgba(13, 92, 159, 0.12);
+  border-radius: 20px;
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(13, 92, 159, 0.3);
+    box-shadow: 0 16px 35px rgba(13, 92, 159, 0.08);
+    transform: translateY(-4px);
+  }
+}
+
+.checkIconBullet {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #EEF6FF;
+  color: #0D5C9F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.featureItemTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1A1A1A;
+  margin: 0 0 0.35rem 0;
+}
+
+.featureItemDesc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
 }

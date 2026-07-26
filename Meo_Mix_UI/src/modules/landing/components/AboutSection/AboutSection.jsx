@@ -5,10 +5,10 @@ import styles from './AboutSection.module.scss';
 
 export const AboutSection = () => {
   const stats = [
-    { label: 'Bottles Delivered', value: '10M+', icon: FiAward, color: '#FF8A00' },
-    { label: 'Cities Served', value: '50+', icon: FiTrendingUp, color: '#FFC837' },
-    { label: 'Quality Assured', value: 'Premium', icon: FiHeart, color: '#FF6FA8' },
-    { label: 'Retail Partners', value: '500+', icon: FiShield, color: '#49B649' }
+    { label: 'Monthly Bottles Served', value: '10,00,000+', icon: FiAward, color: '#FF8A00' },
+    { label: 'Indian States Served', value: '8+ States', icon: FiTrendingUp, color: '#FFC837' },
+    { label: 'Export Countries', value: '4 Countries', icon: FiHeart, color: '#FF6FA8' },
+    { label: 'Industry Experience', value: 'Since 1994', icon: FiShield, color: '#49B649' }
   ];
 
   // Featured Bottle Showcase featuring Musk Melon & Pink Guava
@@ -173,8 +173,8 @@ export const AboutSection = () => {
               transition={{ duration: 0.7 }}
               className={styles.subHeading}
             >
-              Authentic <span className={styles.orangeGradientText}>Fruit Flavor</span>,<br />
-              Crafted With Passion.
+              Fruit Pulp Based, <span className={styles.orangeGradientText}>Authentic Taste</span>,<br />
+              Uncompromised Quality.
             </motion.h3>
 
             <motion.p
@@ -184,7 +184,7 @@ export const AboutSection = () => {
               transition={{ duration: 0.7, delay: 0.15 }}
               className={styles.paragraphText}
             >
-              Made from carefully selected fruits and crafted using advanced hygienic processing, Meo Mix delivers refreshing taste, vibrant flavors, and premium quality in every sip.
+              Meo Mix is a premium fruit beverage brand proudly manufactured by Empire Foods & Beverages. With strong roots in the fruit industry since 1994, our journey has always focused on delivering beverages that combine authentic fruit taste with uncompromised quality.
             </motion.p>
 
             <motion.p
@@ -194,7 +194,7 @@ export const AboutSection = () => {
               transition={{ duration: 0.7, delay: 0.25 }}
               className={styles.subParagraphText}
             >
-              Every bottle undergoes cold-press fruit extraction and ultra-hygienic aseptic bottling to safeguard essential vitamins, vibrant colors, and rich aromas.
+              Every bottle is produced in our modern manufacturing facility using advanced technology and stringent quality control systems. From homes to schools, restaurants to retailers, Meo Mix has become a trusted choice across India and international markets.
             </motion.p>
 
             {/* CTA Button */}

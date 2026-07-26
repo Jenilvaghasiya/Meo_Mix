@@ -1,39 +1,59 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiCheckCircle, FiShield, FiHeart, FiTag, FiZap, FiSettings } from 'react-icons/fi';
+import { FiCheckCircle, FiShield, FiHeart, FiTag, FiZap, FiSettings, FiGlobe, FiAward, FiSmile, FiPackage } from 'react-icons/fi';
 import styles from './WhyChoose.module.scss';
 
 export const WhyChoose = () => {
   const features = [
     {
-      title: 'Authentic Fruit Flavor',
-      desc: 'Pressed directly from sun-ripened orchard fruits without artificial flavors or high-fructose corn syrups.',
+      title: 'Fruit Pulp Based',
+      desc: 'Crafted using quality fruit pulp to deliver a rich, authentic, and refreshing beverage experience.',
       icon: FiHeart
     },
     {
-      title: 'Premium Ingredients',
-      desc: 'Sourced from certified sustainable fruit growers with strict quality control from seed to bottle.',
+      title: 'No Artificial Sweeteners',
+      desc: 'Formulated with balanced fruit sugar sweetness without harsh artificial sugar substitutes.',
       icon: FiCheckCircle
     },
     {
-      title: 'Instant Refreshment',
-      desc: 'A perfectly balanced ratio of fruit sugars and electrolytes designed to revitalize your day.',
-      icon: FiZap
+      title: 'Delicious Authentic Taste',
+      desc: 'Carefully curated recipes that capture the natural essence and delicious taste of sun-ripened fruits.',
+      icon: FiSmile
     },
     {
-      title: 'Trusted Quality',
-      desc: 'ISO 22000 certified bottling facilities equipped with state-of-the-art aseptic processing technology.',
+      title: 'Premium Quality Ingredients',
+      desc: 'Sourced from trusted suppliers with strict raw material selection and quality testing.',
+      icon: FiAward
+    },
+    {
+      title: 'Hygienically Manufactured',
+      desc: 'Produced in ultra-hygienic aseptic bottling facilities following strict food safety standards.',
       icon: FiShield
     },
     {
-      title: 'Affordable Luxury',
-      desc: 'Enjoy international 5-star beverage standard at a price accessible for daily wholesome hydration.',
+      title: 'Modern Automatic Facility',
+      desc: 'Equipped with advanced automated production lines and cold-chain precision systems.',
+      icon: FiSettings
+    },
+    {
+      title: 'Strict Quality Control',
+      desc: 'Every batch undergoes rigorous quality checks from raw material intake to final packaging.',
+      icon: FiZap
+    },
+    {
+      title: 'Affordable Pricing',
+      desc: 'Making high-quality, premium fruit beverages accessible and affordable for every consumer.',
       icon: FiTag
     },
     {
-      title: 'Quality Manufacturing',
-      desc: 'Precision cold-chain logistics preserving maximum nutritional value and peak freshness in every batch.',
-      icon: FiSettings
+      title: 'Trusted by Retailers',
+      desc: 'Empowering thousands of retail partners, supermarkets, and institutions across multiple Indian states.',
+      icon: FiPackage
+    },
+    {
+      title: 'Growing International Presence',
+      desc: 'Exporting to multiple countries while proudly representing Indian manufacturing excellence globally.',
+      icon: FiGlobe
     }
   ];
 
@@ -46,7 +66,7 @@ export const WhyChoose = () => {
             Why Millions <span className="gradient-text">Love Meo Mix</span>
           </h2>
           <p className={styles.subtext}>
-            Built on transparency, authentic taste, and world-class bottling standards.
+            Built on transparency, authentic taste, and world-class bottling standards since 1994.
           </p>
         </div>
 
@@ -59,7 +79,7 @@ export const WhyChoose = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
                 whileHover={{ y: -8, scale: 1.02 }}
                 className={styles.featureCard}
               >

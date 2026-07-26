@@ -6,6 +6,7 @@ export const FacilitySection = () => {
   return (
     <section className={styles.facilitySection}>
       <div className={styles.container}>
+        {/* Welcome & Product Showcase */}
         <div className={styles.grid}>
           {/* Left Text Column */}
           <motion.div
@@ -20,7 +21,7 @@ export const FacilitySection = () => {
               <span className={styles.brandHighlight}>MEO MIX</span>
             </h2>
             <p className={styles.welcomeSubtext}>
-              Where quality meets passion, and every sip is a testament to our dedication to a healthier, tastier world.
+              Where quality meets passion, and every sip is a testament to our dedication to a healthier, tastier world. Made using quality fruit pulp, premium ingredients, and strict food safety standards.
             </p>
           </motion.div>
 

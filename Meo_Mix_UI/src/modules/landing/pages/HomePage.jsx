@@ -6,6 +6,7 @@ import { AboutSection } from '../components/AboutSection/AboutSection';
 import { VisionMission } from '../components/VisionMission/VisionMission';
 import { ProductShowcase } from '../components/ProductShowcase/ProductShowcase';
 import { WhyChoose } from '../components/WhyChoose/WhyChoose';
+import { ManufacturingQualitySection } from '../../about/components/ManufacturingQualitySection/ManufacturingQualitySection';
 import { InteractiveBottle } from '../components/InteractiveBottle/InteractiveBottle';
 import { GallerySection } from '../components/GallerySection/GallerySection';
 import { VideoSection } from '../components/VideoSection/VideoSection';
@@ -36,31 +37,34 @@ export const HomePage = () => {
         {/* Section 4: Flavor Selector (Bottle Slider) */}
         <FlavorSelector />
 
-        {/* Section 4: Product Showcase */}
+        {/* Section 5: Product Showcase */}
         <ProductShowcase />
 
-        {/* Section 5: Why Choose Meo Mix */}
+        {/* Section 6: Why Choose Meo Mix */}
         <WhyChoose />
 
-        {/* Section 6: Interactive Bottle Showcase */}
+        {/* Section 7: Manufacturing Excellence & Quality Assurance */}
+        <ManufacturingQualitySection />
+
+        {/* Section 8: Interactive Bottle Showcase */}
         <InteractiveBottle />
 
-        {/* Section 7: Gallery */}
+        {/* Section 9: Gallery */}
         <GallerySection />
 
-        {/* Section 8: Video Section */}
+        {/* Section 10: Video Section */}
         <VideoSection />
 
-        {/* Section 9: Distributor CTA */}
+        {/* Section 11: Distributor CTA */}
         <DistributorCTA />
 
-        {/* Section 10: Testimonials */}
+        {/* Section 12: Testimonials */}
         <Testimonials />
 
-        {/* Section 11: FAQ */}
+        {/* Section 13: FAQ */}
         <FAQSection />
 
-        {/* Section 12: Contact */}
+        {/* Section 14: Contact */}
         <ContactSection />
       </div>
     </>

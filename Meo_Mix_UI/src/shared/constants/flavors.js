@@ -141,6 +141,7 @@ export const FLAVORS = [
     textColor: '#1E293B',
     fruitElements: ['🍋', '✨', '🍃'],
     nutrition: { calories: '80 kcal', fruitContent: 'Premium Nectar', vitaminC: '110% RDI', sugar: 'Low Sugar' },
+    badge: 'Desi Chiller'
   }
 ];
 
@@ -148,7 +149,7 @@ export const BRAND_INFO = {
   name: 'MEO MIX',
   company: 'Empire Foods & Beverages',
   tagline: 'Refresh Every Sip',
-  description: 'Crafting world-class fruit beverages with premium fruit pulp and ultra-hygienic aseptic bottling technology.',
+  description: 'Crafting world-class fruit pulp based beverages since 1994 with modern aseptic bottling technology and strict quality standards.',
   phone: '+91 90990 00776',
   email: 'sales.empireindia@gmail.com',
   supportEmail: 'sales.empireindia@gmail.com',

@@ -47,6 +47,7 @@ export const Footer = () => {
                 <li><Link to="/products">Flavors & Range</Link></li>
                 <li><Link to="/about">Our Story</Link></li>
                 <li><Link to="/distributors">Become a Dealer</Link></li>
+                <li><a href="/Brochure/Meo%20Mix%20Brochure.pdf" target="_blank" rel="noopener noreferrer">Brochure (PDF)</a></li>
                 <li><Link to="/contact">Contact Support</Link></li>
               </ul>
             </div>

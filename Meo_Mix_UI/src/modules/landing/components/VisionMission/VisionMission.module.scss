@@ -11,13 +11,81 @@
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1180px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 5rem;
 }
 
+// Our Story Header Block
+.storyHeaderBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+  gap: 1.25rem;
+}
+
+.storyTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  color: #1A1A1A;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.storyLeadParagraph {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: #334155;
+  font-weight: 600;
+  margin: 0;
+}
+
+.visionQuoteCard {
+  background: #FFF9F2;
+  border: 1px solid rgba(255, 138, 0, 0.2);
+  border-radius: 16px;
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 8px 25px rgba(255, 138, 0, 0.05);
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    padding: 1.2rem 1.4rem;
+  }
+}
+
+.quoteIcon {
+  font-size: 2rem;
+  color: #0D5C9F;
+  flex-shrink: 0;
+}
+
+.quoteText {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0D5C9F;
+  line-height: 1.55;
+  margin: 0;
+  font-style: italic;
+}
+
+.storySubParagraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748B;
+  margin: 0;
+}
+
+// Zig Zag Rows
 .zigZagRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,6 +98,28 @@
   }
 }
 
+.reverseRow {
+  @media (min-width: 961px) {
+    .imageSideLeft {
+      order: 1;
+    }
+    .textSideRight {
+      order: 2;
+    }
+  }
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.titleIcon {
+  font-size: 2rem;
+  color: #39B54A;
+}
+
 .textSideLeft {
   display: flex;
   align-items: flex-start;
@@ -39,25 +129,24 @@
 .textSideRight {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 1.2rem;
 }
 
 .verticalAccentLine {
   width: 4px;
-  min-height: 140px;
-  background: linear-gradient(180deg, #0D5C9F 0%, #38B6FF 100%);
+  align-self: stretch;
+  background: linear-gradient(180deg, #0D5C9F 0%, #39B54A 100%);
   flex-shrink: 0;
   border-radius: 4px;
 }
 
 .verticalAccentLineRight {
   width: 4px;
-  min-height: 140px;
-  background: linear-gradient(180deg, #0D5C9F 0%, #38B6FF 100%);
+  align-self: stretch;
+  background: linear-gradient(180deg, #0D5C9F 0%, #39B54A 100%);
   flex-shrink: 0;
   border-radius: 4px;
-  order: 2;
 }
 
 .textContent {
@@ -69,24 +158,56 @@
 .rowTitle {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 800;
+  font-weight: 900;
   color: #1e293b;
   margin: 0;
 }
 
 .accentText {
-  background: linear-gradient(135deg, #0D5C9F 0%, #38B6FF 100%);
+  background: linear-gradient(135deg, #0D5C9F 0%, #39B54A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
 .rowDesc {
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.7;
   color: #475569;
   margin: 0;
-  max-width: 520px;
+  max-width: 540px;
+}
+
+.striveHeader {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1A1A1A;
+  margin-top: 0.5rem;
+}
+
+.striveList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.striveItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.checkIcon {
+  color: #39B54A;
+  font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 /* Image Side with Offset Corner Frames */
@@ -102,9 +223,10 @@
   width: 100%;
   max-width: 520px;
   height: 320px;
-  border-radius: 6px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(13, 92, 159, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  background: #1E293B;
   z-index: 2;
 
   @media (max-width: 640px) {
@@ -116,14 +238,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  display: block;
 }
 
-/* MEO MIX Brand Blue Offset Border Frames */
+.rowImageBottle {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
+  display: block;
+}
+
+/* MEO MIX Brand Offset Border Frames */
 .offsetBorderFrameTopRight {
   position: absolute;
   top: 0;
@@ -131,7 +258,7 @@
   width: 90%;
   height: 90%;
   border-top: 4px solid #0D5C9F;
-  border-right: 4px solid #38B6FF;
+  border-right: 4px solid #39B54A;
   z-index: 1;
   pointer-events: none;
 }
@@ -143,7 +270,7 @@
   width: 90%;
   height: 90%;
   border-bottom: 4px solid #0D5C9F;
-  border-left: 4px solid #38B6FF;
+  border-left: 4px solid #39B54A;
   z-index: 1;
   pointer-events: none;
 }

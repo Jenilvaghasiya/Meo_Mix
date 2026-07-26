@@ -30,11 +30,16 @@ export const FlavorProvider = ({ children }) => {
   const [cursorText, setCursorText] = useState('');
   const [isHovered, setIsHovered] = useState(false);
 
-  // Pre-cache all image assets into browser RAM memory immediately on initial app load
+  // Pre-cache all image & video assets into browser memory on app launch
   useEffect(() => {
     ASSETS_TO_PRELOAD.forEach((src) => {
       const img = new Image();
       img.src = src;
+    });
+
+    // Fetch video blobs into browser HTTP cache
+    ['/Video/Meo_Mix_about.mp4', '/Video/Meo_Mix_Product.mp4'].forEach((src) => {
+      fetch(src, { mode: 'no-cors' }).catch(() => {});
     });
   }, []);
 

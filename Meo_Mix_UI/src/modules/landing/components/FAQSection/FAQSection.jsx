@@ -9,7 +9,7 @@ export const FAQSection = () => {
   const faqs = [
     {
       q: 'What makes MEO MIX beverages so delicious and high quality?',
-      a: 'MEO MIX is crafted using premium fruit extracts and carefully curated formulations. We ensure ultra-hygienic aseptic bottling to deliver rich flavor and freshness in every bottle.'
+      a: 'MEO MIX is manufactured by Empire Foods & Beverages using quality fruit pulp, premium ingredients, and strict food safety standards. With heritage in the fruit industry since 1994, our modern automated facility ensures consistent quality, freshness, and delicious taste in every bottle.'
     },
     {
       q: 'What is the shelf life of Meo Mix beverages?',

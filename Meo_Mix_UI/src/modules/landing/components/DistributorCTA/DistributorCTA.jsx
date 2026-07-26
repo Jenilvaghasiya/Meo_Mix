@@ -48,11 +48,11 @@ export const DistributorCTA = () => {
             </div>
 
             <h2 className={styles.title}>
-              Partner With <br />
-              <span>Empire Foods & Beverages</span>
+              Become Our <br />
+              <span>Distributor Partner</span>
             </h2>
             <p className={styles.desc}>
-              Join India's fastest growing premium fruit juice network. Benefit from high profit margins, marketing collateral support, and guaranteed supply chain reliability.
+              Join the growing Meo Mix distribution network. We offer attractive business opportunities, strong brand support, marketing assistance, reliable supply chain, and consistent product quality across India and export markets.
             </p>
             <div className={styles.ctaBtnHolder}>
               <Button
@@ -63,6 +63,14 @@ export const DistributorCTA = () => {
               >
                 Apply For Dealership
               </Button>
+              <a
+                href="/Brochure/Meo%20Mix%20Brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.downloadBrochureBtn}
+              >
+                Download Brochure (PDF)
+              </a>
             </div>
           </div>
 

@@ -8,14 +8,14 @@ export const GallerySection = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
   const galleryItems = [
-    { title: 'Alphonso Mango Harvest', flavor: 'Mango', volume: '160ml • Rs. 10', img: '/products/mango_bottle.png' },
-    { title: 'Lush Lychee Blossom', flavor: 'Lychee', volume: '160ml • Rs. 10', img: '/products/lychee_bottle.png' },
-    { title: 'Valencia Orange Grove', flavor: 'Orange Drink', volume: '160ml • Rs. 10', img: '/products/orange_bottle.png' },
-    { title: 'Golden Hawaiian Pineapple', flavor: 'Pineapple', volume: '160ml • Rs. 10', img: '/products/pineapple_bottle.png' },
-    { title: 'Pink Guava Orchard', flavor: 'Pink Guava', volume: '160ml • Rs. 10', img: '/products/pink_guava_bottle.png' },
-    { title: 'Ruby Pomegranate Arils', flavor: 'Pomegranate Drink', volume: '160ml • Rs. 10', img: '/products/pomegranate_bottle.png' },
-    { title: 'Crisp Musk Melon Breeze', flavor: 'Musk Melon', volume: '160ml • Rs. 10', img: '/products/muskmelon_bottle.png' },
-    { title: 'Classic Nimbu Paani Zest', flavor: 'Nimbu Paani Drink', volume: '160ml • Rs. 10', img: '/products/nimbu_pani_bottle.png' }
+    { title: 'Alphonso Mango Harvest', flavor: 'Mango', volume: '160ml • Rs. 10', img: '/products/mango_bottle.webp' },
+    { title: 'Lush Lychee Blossom', flavor: 'Lychee', volume: '160ml • Rs. 10', img: '/products/lychee_bottle.webp' },
+    { title: 'Valencia Orange Grove', flavor: 'Orange Drink', volume: '160ml • Rs. 10', img: '/products/orange_bottle.webp' },
+    { title: 'Golden Hawaiian Pineapple', flavor: 'Pineapple', volume: '160ml • Rs. 10', img: '/products/pineapple_bottle.webp' },
+    { title: 'Pink Guava Orchard', flavor: 'Pink Guava', volume: '160ml • Rs. 10', img: '/products/pink_guava_bottle.webp' },
+    { title: 'Ruby Pomegranate Arils', flavor: 'Pomegranate Drink', volume: '160ml • Rs. 10', img: '/products/pomegranate_bottle.webp' },
+    { title: 'Crisp Musk Melon Breeze', flavor: 'Musk Melon', volume: '160ml • Rs. 10', img: '/products/muskmelon_bottle.webp' },
+    { title: 'Classic Nimbu Paani Zest', flavor: 'Nimbu Paani Drink', volume: '160ml • Rs. 10', img: '/products/nimbu_pani_bottle.webp' }
   ];
 
   return (

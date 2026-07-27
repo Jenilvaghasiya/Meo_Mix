@@ -14,7 +14,7 @@ export const AboutSection = () => {
   // Featured Bottle Showcase featuring Musk Melon & Pink Guava
   const bottles = [
     {
-      src: '/products/pink_guava_bottle.png',
+      src: '/products/pink_guava_bottle.webp',
       alt: 'Meo Mix Pink Guava Bottle',
       className: styles.leftTrioBottle,
       animateY: [0, -18, 0],
@@ -23,7 +23,7 @@ export const AboutSection = () => {
       delay: 0.4
     },
     {
-      src: '/products/muskmelon_bottle.png',
+      src: '/products/muskmelon_bottle.webp',
       alt: 'Meo Mix Musk Melon Bottle',
       className: styles.centerTrioHero,
       animateY: [0, -22, 0],
@@ -32,7 +32,7 @@ export const AboutSection = () => {
       delay: 0
     },
     {
-      src: '/products/mango_bottle.png',
+      src: '/products/mango_bottle.webp',
       alt: 'Meo Mix Royal Mango Bottle',
       className: styles.rightTrioBottle,
       animateY: [0, -18, 0],

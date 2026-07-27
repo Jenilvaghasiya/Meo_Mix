@@ -38,7 +38,7 @@ export const InteractiveBottle = () => {
             className={styles.bottleCenterHolder}
           >
             <img
-              src="/products/mango_bottle.png"
+              src="/products/mango_bottle.webp"
               alt="Meo Mix Interactive 3D Showcase Bottle"
               className={styles.stageBottleImg}
             />

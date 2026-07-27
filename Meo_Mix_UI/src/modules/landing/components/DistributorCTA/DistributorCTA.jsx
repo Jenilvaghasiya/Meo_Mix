@@ -77,7 +77,7 @@ export const DistributorCTA = () => {
           {/* Right Side: Meo Mix White Brand Logo */}
           <div className={styles.logoShowcase}>
             <img
-              src="/logo/meo_mix_logo_white.png"
+              src="/logo/meo_mix_logo_white.webp"
               alt="MEO MIX White Logo"
               className={styles.ctaRightWhiteLogo}
             />

@@ -35,7 +35,7 @@ export const Preloader = ({ onComplete }) => {
           <div className={styles.centerBox}>
             <div className={styles.logoWrapper}>
               <img
-                src="/logo/meo_mix_logo.png"
+                src="/logo/meo_mix_logo.webp"
                 alt="MEO MIX Preloader Logo"
                 className={styles.logoImg}
               />

@@ -36,7 +36,7 @@ export const FacilitySection = () => {
             <div className={styles.facilityFrameWrapper}>
               <div className={styles.facilityImageCard}>
                 <img
-                  src="/products/All_In_One.png"
+                  src="/products/All_In_One.webp"
                   alt="MEO MIX Complete Beverage Range"
                   className={styles.facilityImg}
                 />

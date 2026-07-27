@@ -17,7 +17,7 @@ export const Footer = () => {
             <div className={styles.brandCol}>
               <Link to="/" className={styles.logoLink}>
                 <img
-                  src="/logo/meo_mix_logo_white.png"
+                  src="/logo/meo_mix_logo_white.webp"
                   alt="MEO MIX Logo White"
                   className={styles.footerLogo}
                 />

@@ -50,7 +50,7 @@ export const Navbar = () => {
       <div className={styles.container}>
         <Link to="/" className={styles.logoLink}>
           <img
-            src="/logo/meo_mix_logo.png"
+            src="/logo/meo_mix_logo.webp"
             alt="MEO MIX Logo"
             className={styles.logoImg}
           />

@@ -128,7 +128,7 @@ export const FlavorSelector = () => {
                     {/* Bottom Metadata (Favrito Style) */}
                     <div className={styles.cardBottomMeta}>
                       <h3 className={styles.productTitle}>
-                        MEO MIX {item.name.toUpperCase()} – 160ML
+                        {item.name.toUpperCase()} – 160ML
                       </h3>
                       <div className={styles.underlineDivider} />
                       <div className={styles.priceRow}>

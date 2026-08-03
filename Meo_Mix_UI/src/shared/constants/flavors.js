@@ -37,7 +37,7 @@ export const FLAVORS = [
   },
   {
     id: 'orange',
-    name: 'Orange Drink',
+    name: 'Orange',
     tagline: 'Sunshine Citrus Blast',
     description: 'Crisp Valencia oranges cold-pressed for maximum Vitamin C vibrancy and a perfectly balanced tangy-sweet punch.',
     bottleImg: '/products/orange_bottle.webp',
@@ -91,7 +91,7 @@ export const FLAVORS = [
   },
   {
     id: 'pomegranate',
-    name: 'Pomegranate Drink',
+    name: 'Pomegranate',
     tagline: 'Antioxidant Ruby Nectar',
     description: 'Deep crimson ruby pomegranates brimming with polyphenol antioxidants and a sophisticated tart-sweet profile.',
     bottleImg: '/products/pomegranate_bottle.webp',
@@ -127,7 +127,7 @@ export const FLAVORS = [
   },
   {
     id: 'nimbu',
-    name: 'Nimbu Paani Drink',
+    name: 'Nimbu Paani',
     tagline: 'Traditional Indian Zest',
     description: 'Authentic Indian lemon chiller infused with black salt, cumin, and mint for ultimate digestive vitality.',
     bottleImg: '/products/nimbu_pani_bottle.webp',

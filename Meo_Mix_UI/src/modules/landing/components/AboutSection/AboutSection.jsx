@@ -184,7 +184,7 @@ export const AboutSection = () => {
               transition={{ duration: 0.7, delay: 0.15 }}
               className={styles.paragraphText}
             >
-              Meo Mix is a premium fruit beverage brand proudly manufactured by Empire Foods & Beverages. With strong roots in the fruit industry since 1994, our journey has always focused on delivering beverages that combine authentic fruit taste with uncompromised quality.
+              Meo Mix is a premium fruit beverage brand proudly manufactured by Empire Foods & Beverages. With strong roots in the fruit pulp industry since 1994, our journey has always focused on delivering beverages that combine authentic fruit taste with uncompromised quality.
             </motion.p>
 
             <motion.p

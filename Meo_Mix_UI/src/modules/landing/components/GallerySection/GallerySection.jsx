@@ -10,12 +10,12 @@ export const GallerySection = () => {
   const galleryItems = [
     { title: 'Alphonso Mango Harvest', flavor: 'Mango', volume: '160ml • Rs. 10', img: '/products/mango_bottle.webp' },
     { title: 'Lush Lychee Blossom', flavor: 'Lychee', volume: '160ml • Rs. 10', img: '/products/lychee_bottle.webp' },
-    { title: 'Valencia Orange Grove', flavor: 'Orange Drink', volume: '160ml • Rs. 10', img: '/products/orange_bottle.webp' },
+    { title: 'Valencia Orange Grove', flavor: 'Orange', volume: '160ml • Rs. 10', img: '/products/orange_bottle.webp' },
     { title: 'Golden Hawaiian Pineapple', flavor: 'Pineapple', volume: '160ml • Rs. 10', img: '/products/pineapple_bottle.webp' },
     { title: 'Pink Guava Orchard', flavor: 'Pink Guava', volume: '160ml • Rs. 10', img: '/products/pink_guava_bottle.webp' },
-    { title: 'Ruby Pomegranate Arils', flavor: 'Pomegranate Drink', volume: '160ml • Rs. 10', img: '/products/pomegranate_bottle.webp' },
+    { title: 'Ruby Pomegranate Arils', flavor: 'Pomegranate', volume: '160ml • Rs. 10', img: '/products/pomegranate_bottle.webp' },
     { title: 'Crisp Musk Melon Breeze', flavor: 'Musk Melon', volume: '160ml • Rs. 10', img: '/products/muskmelon_bottle.webp' },
-    { title: 'Classic Nimbu Paani Zest', flavor: 'Nimbu Paani Drink', volume: '160ml • Rs. 10', img: '/products/nimbu_pani_bottle.webp' }
+    { title: 'Classic Nimbu Paani Zest', flavor: 'Nimbu Paani', volume: '160ml • Rs. 10', img: '/products/nimbu_pani_bottle.webp' }
   ];
 
   return (

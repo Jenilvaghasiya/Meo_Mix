@@ -8,8 +8,8 @@ export const FAQSection = () => {
 
   const faqs = [
     {
-      q: 'What makes MEO MIX beverages so delicious and high quality?',
-      a: 'MEO MIX is manufactured by Empire Foods & Beverages using quality fruit pulp, premium ingredients, and strict food safety standards. With heritage in the fruit industry since 1994, our modern automated facility ensures consistent quality, freshness, and delicious taste in every bottle.'
+      q: 'What makes Meo Mix beverages so delicious and high quality?',
+      a: 'Meo Mix is manufactured by Empire Foods & Beverages using quality fruit pulp, premium ingredients, and strict food safety standards. With heritage in the fruit pulp industry since 1994, our modern automated facility ensures consistent quality, freshness, and delicious taste in every bottle.'
     },
     {
       q: 'What is the shelf life of Meo Mix beverages?',
@@ -20,7 +20,7 @@ export const FAQSection = () => {
       a: 'Yes, our nationwide logistics network covers over 50 major cities and regional retail centers. You can also order directly via our authorized distributor portal.'
     },
     {
-      q: 'How can I become a retail stockist or regional distributor?',
+      q: 'How can I become a stockist or regional distributor?',
       a: 'Scroll to our "Distributor CTA" section or fill out the dealership application modal. Our commercial partner team will review your business requirements within 24 hours.'
     },
     {

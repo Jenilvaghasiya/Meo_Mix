@@ -57,8 +57,8 @@ export const VisionMission = () => {
             <div className={styles.offsetBorderFrameTopRight} />
             <div className={styles.imageCard}>
               <img
-                src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=80"
-                alt="Meo Mix Mission - Refreshing Toast"
+                src="/About/image.webp"
+                alt="Meo Mix Mission"
                 className={styles.rowImage}
               />
             </div>
@@ -78,8 +78,8 @@ export const VisionMission = () => {
             <div className={styles.offsetBorderFrameBottomLeft} />
             <div className={styles.imageCard}>
               <img
-                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=80"
-                alt="Meo Mix Vision - Joyous Moments"
+                src="/About/Image_2.webp"
+                alt="Meo Mix Vision"
                 className={styles.rowImage}
               />
             </div>

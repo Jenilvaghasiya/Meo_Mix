@@ -33,7 +33,7 @@ export const DistributorPage = () => {
     { stat: '10,00,000+', label: 'Bottles Served Monthly', desc: 'Consistently supplying millions across India & exports.' },
     { stat: '8 States', label: 'Indian Regional Presence', desc: 'Expanding rapidly across major retail markets.' },
     { stat: '4 Countries', label: 'Global Export Footprint', desc: 'Representing Indian quality in international markets.' },
-    { stat: 'Since 1994', label: 'Fruit Industry Experience', desc: 'Over 30 years of trusted manufacturing heritage.' }
+    { stat: 'Since 1994', label: 'fruit pulp industry Experience', desc: 'Over 30 years of trusted manufacturing heritage.' }
   ];
 
   return (

@@ -73,6 +73,13 @@
   }
 }
 
+.badgeImg {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
 .flyingLeaf {
   position: absolute;
   font-size: clamp(2rem, 3.5vw, 3.2rem);

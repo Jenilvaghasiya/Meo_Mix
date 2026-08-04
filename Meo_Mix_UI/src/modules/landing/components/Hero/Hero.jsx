@@ -12,7 +12,7 @@ const FLAVOR_FRUIT_BADGES = {
   orange: ['🍊', '✨', '🍃'],
   pineapple: ['🍍', '✨', '🍃'],
   guava: ['🍐', '✨', '🍃'],
-  pomegranate: ['🍷', '✨', '🍃'],
+  pomegranate: ['/fruits/Pomegranate.webp', '✨', '🍃'],
   muskmelon: ['🍈', '✨', '🍃'],
   nimbu: ['🍋', '✨', '🍃']
 };
@@ -125,7 +125,13 @@ export const Hero = () => {
               delay: idx * 0.15
             }}
           >
-            <span className={styles.badgeGlassCircle}>{badgeText}</span>
+            <span className={styles.badgeGlassCircle}>
+              {typeof badgeText === 'string' && (badgeText.endsWith('.webp') || badgeText.endsWith('.png') || badgeText.startsWith('/')) ? (
+                <img src={badgeText} alt="Pomegranate Fruit" className={styles.badgeImg} />
+              ) : (
+                badgeText
+              )}
+            </span>
           </motion.span>
         ))}
       </div>

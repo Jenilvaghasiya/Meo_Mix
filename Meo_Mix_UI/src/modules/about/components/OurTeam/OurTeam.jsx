@@ -11,7 +11,8 @@ export const OurTeam = () => {
       bio1: 'With over 30 years of experience in the fruit pulp industry since 1994, Jiten Patel has been the driving force behind the company’s foundation.',
       bio2: 'His deep industry knowledge, commitment to quality, and long-term vision have played a vital role in building Meo Mix into a trusted beverage brand.',
       accentColor: '#39B54A', // Logo Green
-      initials: 'JP'
+      initials: 'JP',
+      image: '/Team/Jitenbhai.webp'
     },
     {
       name: 'MR. HARSHIL PATEL',
@@ -19,7 +20,8 @@ export const OurTeam = () => {
       bio1: 'Harshil Patel brings strong expertise in Food Science, Nutrition, and Microbiology, contributing significantly to product research, formulation, and quality development.',
       bio2: 'His technical knowledge ensures that every Meo Mix product meets high standards of taste, nutrition, and safety.',
       accentColor: '#0D5C9F', // Logo Blue
-      initials: 'HP'
+      initials: 'HP',
+      image: '/Team/Harshilbhai.webp'
     },
     {
       name: 'MR. MAULIK PATEL',
@@ -27,7 +29,8 @@ export const OurTeam = () => {
       bio1: 'Maulik Patel leads the company’s Sales, Marketing, and Business Development initiatives.',
       bio2: 'With extensive experience in market expansion, branding, and distribution management, he has been instrumental in strengthening Meo Mix’s presence across multiple states and international markets.',
       accentColor: '#39B54A', // Logo Green
-      initials: 'MP'
+      initials: 'MP',
+      image: '/Team/Maulikbhai.webp'
     }
   ];
 
@@ -80,10 +83,18 @@ export const OurTeam = () => {
               <div className={styles.photoCol}>
                 <div className={styles.offsetFrameWrapper} style={{ '--frame-accent': person.accentColor }}>
                   <div className={styles.photoCard}>
-                    <div className={styles.photoAvatarInner} style={{ background: 'linear-gradient(135deg, #1E293B 0%, #0F172A 100%)' }}>
-                      <FiUser className={styles.userIcon} />
-                      <span className={styles.initialsText}>{person.initials}</span>
-                    </div>
+                    {person.image ? (
+                      <img
+                        src={person.image}
+                        alt={person.name}
+                        className={styles.directorImg}
+                      />
+                    ) : (
+                      <div className={styles.photoAvatarInner} style={{ background: 'linear-gradient(135deg, #1E293B 0%, #0F172A 100%)' }}>
+                        <FiUser className={styles.userIcon} />
+                        <span className={styles.initialsText}>{person.initials}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
